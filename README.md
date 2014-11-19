@@ -1,4 +1,4 @@
 ####圈养一群代码
 ======
-#####like-eclipse-plugin.vim
+#####likeEclipsePlugin.vim
     模仿eclipse的一些快捷键

@@ -9,5 +9,5 @@
 " imap表示在插入模式下执行的快捷键
 " <C-S-CR> 即 Ctrl+Shift+Enter
 " <C-c> 即 Ctrl+c
-:map <C-S-CR> O
-:imap <C-S-CR> <C-c>O
+map <C-S-CR> O
+imap <C-S-CR> <C-c>O

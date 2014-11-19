@@ -11,3 +11,7 @@
 " <C-c> 即 Ctrl+c
 map <C-S-CR> O
 imap <C-S-CR> <ESC>O
+
+"模拟Ctrl+Enter
+map <C-CR> o
+imap <C-CR> <ESC>o

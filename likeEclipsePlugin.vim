@@ -10,4 +10,4 @@
 " <C-S-CR> 即 Ctrl+Shift+Enter
 " <C-c> 即 Ctrl+c
 map <C-S-CR> O
-imap <C-S-CR> <C-c>O
+imap <C-S-CR> <ESC>O

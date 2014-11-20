@@ -21,7 +21,7 @@ nmap <A-Down> <ESC>ddp
 imap <A-Down> <ESC>ddp
 
 "模拟Alt+↑ 与上一行交换位置
-"bug1 首行的时候变成了删除效果，貌似没有执行P
+"bug1 首行的时候变成了删除效果，貌似没有执行P, 手动执行<ESC>ddkP是没有问题的.
 "bug2 末行会和上一行的上一行交换位置，由于dd剪切后当前行已经消失，光标自动跑到上一行，此时再执行k，光标总计两次向上
 imap <A-Up> <ESC>ddkP
 nmap <A-Up> <ESC>ddkP

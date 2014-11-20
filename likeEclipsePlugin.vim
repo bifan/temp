@@ -25,3 +25,11 @@ imap <A-Down> <ESC>ddp
 "bug2 末行会和上一行的上一行交换位置，由于dd剪切后当前行已经消失，光标自动跑到上一行，此时再执行k，光标总计两次向上
 imap <A-Up> <ESC>ddkP
 nmap <A-Up> <ESC>ddkP
+
+"模拟Ctrl+Alt+↑ 复制当当前行内容到上一行
+imap <C-A-Up> <Esc>yyP
+nmap <C-A-Up> <Esc>yyP
+
+"模拟Ctrl+Alt+↓ 复制当前行内容到下一行
+imap <C-A-Down> <Esc>yyp
+nmap <C-A-Down> <Esc>yyp

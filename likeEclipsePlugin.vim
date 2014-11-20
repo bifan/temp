@@ -1,26 +1,26 @@
 "双引号是注释
 
-"模拟Ctrl+Shift+Enter 在当前行的上一行插入空白行
+"模拟Ctrl+Shift+Enter 在上一行插入空白行
 nmap <C-S-CR> O
 imap <C-S-CR> <ESC>O
 
-"模拟Ctrl+Enter 在当前行的下一行插入空白行
+"模拟Ctrl+Enter 在下一行插入空白行
 nmap <C-CR> o
 imap <C-CR> <ESC>o
 
-"模拟Alt+↓ 与下一行交换位置
-nmap <A-Down> ddp
-imap <A-Down> <ESC>ddp
-
-"模拟Alt+↑ 与上一行交换位置 (思路，把上一行的内容剪切到当前行的下一行)
+"模拟Alt+↑ 当前行上移一行 (把上一行的内容剪切到当前行的下一行)
 nmap <A-Up> kddpk
 imap <A-Up> <ESC>kddpk
 
-"模拟Ctrl+Alt+↑ 复制当当前行内容到上一行
+"模拟Alt+↓ 当前行下移一行
+nmap <A-Down> ddp
+imap <A-Down> <ESC>ddp
+
+"模拟Ctrl+Alt+↑ 复制当前行到上一行
 nmap <C-A-Down> yyp
 imap <C-A-Up> <Esc>yyP
 
-"模拟Ctrl+Alt+↓ 复制当前行内容到下一行
+"模拟Ctrl+Alt+↓ 复制当前行到下一行
 nmap <C-A-Down> yyp
 imap <C-A-Down> <Esc>yyp
 

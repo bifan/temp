@@ -20,11 +20,9 @@ imap <C-CR> <ESC>o
 nmap <A-Down> <ESC>ddp
 imap <A-Down> <ESC>ddp
 
-"模拟Alt+↑ 与上一行交换位置
-"bug1 首行的时候变成了删除效果，貌似没有执行P, 手动执行<ESC>ddkP是没有问题的.
-"bug2 末行会和上一行的上一行交换位置，由于dd剪切后当前行已经消失，光标自动跑到上一行，此时再执行k，光标总计两次向上
-imap <A-Up> <ESC>ddkP
-nmap <A-Up> <ESC>ddkP
+"模拟Alt+↑ 与上一行交换位置 (思路，把上一行的内容剪切到当前行的下一行)
+imap <A-Up> <ESC>kddpk
+nmap <A-Up> <ESC>kddpk
 
 "模拟Ctrl+Alt+↑ 复制当当前行内容到上一行
 imap <C-A-Up> <Esc>yyP

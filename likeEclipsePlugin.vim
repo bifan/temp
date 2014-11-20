@@ -15,3 +15,13 @@ imap <C-S-CR> <ESC>O
 "模拟Ctrl+Enter
 nmap <C-CR> o
 imap <C-CR> <ESC>o
+
+"模拟Alt+↓ 与下一行交换位置 esc进入普通模式 dd剪切当前行 p在当前行的下一行粘贴
+nmap <A-Down> <ESC>ddp
+imap <A-Down> <ESC>ddp
+
+"模拟Alt+↑ 与上一行交换位置
+"bug1 首行的时候变成了删除效果，貌似没有执行P
+"bug2 末行会和上一行的上一行交换位置，由于dd剪切后当前行已经消失，光标自动跑到上一行，此时再执行k，光标总计两次向上
+imap <A-Up> <ESC>ddkP
+nmap <A-Up> <ESC>ddkP

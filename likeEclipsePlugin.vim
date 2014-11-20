@@ -1,5 +1,3 @@
-"双引号是注释
-
 "模拟Ctrl+Shift+Enter 在上一行插入空白行
 nmap <C-S-CR> O
 imap <C-S-CR> <ESC>O
@@ -24,8 +22,6 @@ imap <C-A-up> <ESC>yyP
 nmap <C-A-down> yyp
 imap <C-A-down> <ESC>yyp
 
-"一串命令中有一个执行失败则后面的都会被vim忽略
-"nmap表示在普通模式下执行的快捷键(经测试与map效果相同)
-"imap表示在插入模式下执行的快捷键
-"<C-S-CR> 即 Ctrl+Shift+Enter
-"<C-c> 即 Ctrl+c
+"快捷键映射的一串命令中有一个执行失败则后面的都会被vim忽略. 得注意避免产生Bug. 比如在首行遇到命令<ESC>ki521, k无法上移, i521不会被执行.
+"nmap (Normal Model Mapping) 普通模式下执行的快捷键(经测试与map效果相同)
+"imap (Insert Model Mapping) 插入模式下执行的快捷键

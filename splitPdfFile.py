@@ -1,23 +1,34 @@
+# -*- coding: utf-8 -*-
 #需要模块：http://pybrary.net/pyPdf/
-#Demo：一个约1000页的pdf code.pdf
-#      以500页为界分割为两个pdf
+#
 from pyPdf import PdfFileWriter, PdfFileReader
 
-filePath = ""
-maxPages = 0
+filePath = "" #"fileName.pdf"
+splitPages = 200 #默认每200页进行一次分割
 
+inputpdf = PdfFileReader(open(filePath, "rb"))
+output = PdfFileWriter()
 
-inputpdf = PdfFileReader(open("code.pdf", "rb"))
-output1 = PdfFileWriter()
-output2 = PdfFileWriter()
 for i in xrange(inputpdf.numPages):
-    if(i<500):
-        output1.addPage(inputpdf.getPage(i))
-    if(i>500):
-        output2.addPage(inputpdf.getPage(i))
-outputStream1 = file("code1.pdf", "wb")
-outputStream2 = file("code2.pdf", "wb")
-output1.write(outputStream1)
-output2.write(outputStream2)
-outputStream1.close()
-outputStream2.close()
+    
+    if(i==0):#0可以整除splitPages，会产生一张只有一页的PDF文件
+        continue
+    
+    output.addPage(inputpdf.getPage(i))
+    
+    #能够整除splitPages时，输出这部分PDF
+    if((i)%splitPages==0):
+        outputStream = file(str(i)+".pdf", "wb")
+        output.write(outputStream)
+        outputStream.close()
+        output = PdfFileWriter()#输出后开始一个新的，不然会保留已输出的页
+        print str(i)+" split PDF"
+
+    #最后一部分pdf文件，在最后一次for循环时输出。
+    if(inputpdf.numPages == i+1):
+        outputStream = file(str(i)+".pdf", "wb")
+        output.write(outputStream)
+        outputStream.close()
+        print str(i)+" last PDF"
+        
+

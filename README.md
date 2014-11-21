@@ -1,5 +1,3 @@
-###**圈养一群代码**
---------------------------
 **simulateEclipsePlugin.vim**
 >vim插件
 

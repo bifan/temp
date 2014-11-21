@@ -2,8 +2,8 @@
 ======
 - **simulateEclipsePlugin.vim**
 
-> vim插件
+  > vim插件
 
-> 模仿eclipse插件
+  > 模仿eclipse插件
 
 - ****

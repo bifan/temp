@@ -17,15 +17,15 @@
 
 >使用\*.bat文件调用, \*.bat文件在Win+R里可不写扩展名调用, 把\*.bat和imgResize.py放在同一文件夹并加入环境变量
 
->例如 to700.bat
+>to700.bat
 ```
 @echo off
 change-img-size.py 700
 ```
->执行后提示
+>执行后类似提示:
 ```
 img0.doNothing--------(700width.jpg)
 img1.resize.gif2jpg---(1200width.gif)
-
+     
 请按任意键继续. . .
 ```

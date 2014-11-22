@@ -1,6 +1,5 @@
 **simulateEclipsePlugin.vim**
 >vim插件 (Windows)
-
 >模仿eclipse的一些快捷键
 
 ==================================

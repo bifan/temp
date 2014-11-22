@@ -20,7 +20,9 @@
 >to700.bat
 ```
 @echo off
-change-img-size.py 700
+imgResize.py 700
+pause
+exit
 ```
 >执行后类似提示:
 ```

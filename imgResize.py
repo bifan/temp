@@ -2,7 +2,7 @@
 #
 #把所有jpg、png、gif文件修改为指定的宽度，高度保持原比例
 #图片的高度会忽略小数
-#默认处理Windows系统桌面的图片文件(jpg、png、gif)
+#默认处理Windows系统桌面的图片文件
 #
 #python3.4 Pillow2.6.1
 #Pillow is the "friendly" PIL fork, http://python-pillow.github.io/, 在PyPI下载.

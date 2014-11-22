@@ -15,5 +15,9 @@
 
 >根据指定宽度批量修改图片文件(jpg\gif\png)的尺寸, 保持比例, 统一另存为jpg文件
 
->使用*.bat文件调用, *.bat文件在Win+R里可不写扩展名, 把*.bat和imgResize.py放在同一文件夹并加入环境变量
-
+>使用\*.bat文件调用, \*.bat文件在Win+R里可不写扩展名调用, 把\*.bat和imgResize.py放在同一文件夹并加入环境变量
+```
+::to700.bat
+@echo off
+change-img-size.py 700
+```

@@ -26,6 +26,5 @@ change-img-size.py 700
 ```
 img0.doNothing--------(700width.jpg)
 img1.resize.gif2jpg---(1200width.gif)
-     
 请按任意键继续. . .
 ```

@@ -21,14 +21,14 @@ def getDesktopPath():
     return winreg.QueryValueEx(key, "Desktop")[0]
 
 def imgOk(x, imgName):
-    return x == tarWidth_int and imgName.count('.jpg')>0
+    return x == tarWidth_int and imgName.endswith(".jpg")
 
 def toJpg(imgName, img):
     global PROCESS_MSG
-    if imgName.count('.png'):
+    if imgName.endswith('.png'):
         imgName += '.jpg'#直接追加jpg扩展名，简单粗暴
         PROCESS_MSG += ".png2jpg"
-    elif imgName.count('.gif'):
+    elif imgName.endswith('.gif'):
         imgName += '.jpg'
         img = img.convert('RGB')#gif 2 jpg 预处理
         PROCESS_MSG += ".gif2jpg"

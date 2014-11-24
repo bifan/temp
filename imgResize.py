@@ -10,7 +10,7 @@
 from PIL import Image
 import os,glob,winreg,sys
 
-tarWidth_str = sys.argv[1]
+tarWidth_str = sys.argv[1]#sys.argv[0]是当前文件的路径
 tarWidth_int = int(tarWidth_str)
 
 PROCESS_MSG = ""

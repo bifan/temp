@@ -48,6 +48,10 @@ def chImgSize(imgName):
         img = img.resize((tarWidth_int, int(y*tarWidth_int/x)), Image.ANTIALIAS)#resize((宽, 高), 算法)
         PROCESS_MSG += ".resize"
     (imgName,img) = toJpg(imgName, img)
+    
+    if(img.mode == "CMYK"):#如果是CMYK则转成RGB
+        img = img.convert("RGB")
+    
     img.save(tarWidth_str+"-"+imgName, quality=90)#save(保存路径, 图片质量)
     return PROCESS_MSG
 
